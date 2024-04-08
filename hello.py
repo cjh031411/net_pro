@@ -1,20 +1,13 @@
-from random import randint
+a,b=map(int,input().split())
 
-money=50
+if(a<b):
+    tmp=a
+    a=b
+    b=tmp
 
-while True:
-    coin=randint(1,2)
-    predict=randint(1,2)
-    if(predict==coin):
-        money+=9
-    else:
-        money-=10
-    print(money,"$")
+while b!=0:
+    n=a%b
+    a=b
+    b=n
 
-
-    if(money<=0):
-        print("you lose")
-        break
-    elif(money>=100):
-        print("you win")
-        break
+print(a)
