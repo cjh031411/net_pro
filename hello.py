@@ -1,7 +1,8 @@
-sum=0
-for i in range(1,1001):
-    i=str(i)
-    for s in i:
-        sum+=int(s)
+l=[]
+sq_l=[]
+for i in range(50):
+    l.append(i)
+    sq_l.append(i*i)
 
-print(sum)
+print(l)
+print(sq_l)
