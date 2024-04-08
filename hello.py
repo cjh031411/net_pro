@@ -1,14 +1,20 @@
-l=[1,2,3]
-print(l)
-l[1]=17
-print(l)
-l.extend([4,5,6])
-print(l)
-l.pop(0)
-print(l)
-l.sort()
-print(l)
-l.reverse()
-print(l)
-l.insert(3,25)
-print(l)
+from random import randint
+
+money=50
+
+while True:
+    coin=randint(1,2)
+    predict=randint(1,2)
+    if(predict==coin):
+        money+=9
+    else:
+        money-=10
+    print(money,"$")
+
+
+    if(money<=0):
+        print("you lose")
+        break
+    elif(money>=100):
+        print("you win")
+        break
