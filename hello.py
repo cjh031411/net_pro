@@ -1,20 +1,24 @@
-word='led=on&motor=off&switch=off'
+class Person:
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
 
-d=dict()
-tmp=str()
-l=[]
+    def getName(self):
+        print(self.name)
 
-for i in word:
-    if i=='=' or i=='&':
-        l.append(tmp)
-        tmp=''
-    else:
-        tmp+=i
-    
-l.append(tmp)
-print(l)
+    def getAge(self):
+        print(self.age)
 
-for i in range(len(l)//2):
-    d[l[i*2]]=l[i*2+1]
+class Employee(Person):
+    def __init__(self, name, age,employeeId):
+        super().__init__(name, age)
+        self.employeeId=employeeId
 
-print(d)
+    def getID(self):
+        print(self.employeeId)
+
+iot=Employee("IoT",65,2018)
+
+iot.getName()
+iot.getAge()
+iot.getID()
