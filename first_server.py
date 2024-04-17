@@ -7,5 +7,5 @@ s.listen(2)
 while True:
     client,addr=s.accept()
     print('Connection from',addr)
-    client.send(b'Hello'+addr[0].encode())
+    client.send(b'Hello' +addr[0].encode())
     client.close()
